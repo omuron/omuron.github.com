@@ -159,12 +159,12 @@
                     <p class="mfb">
                         <ul class="fr">
                             <li>指定したフォントがウェブで使える。</li>
-			    <br>
 			    <li>環境によらず同じフォントが使える。<br>
 			    文字化け, 文字ズレが無くなる</li>
-			    <br>
 			    <li>欧米ではかなり使われ始めている。<br>
 			    New York Times, Ford などなど</li>
+			    <li>なぜクラウドフォント？<br>
+			    Webサイトだけではなく、クラウド環境で全てで！</li>
 			    
                         </ul>
                     </p>
@@ -174,25 +174,74 @@
                         NYTimes, Ford。それ以外にもGoogle Docsで使えるようになってたり，Creative Cloudで使えるようになってたり。
                     </aside>
                 </section>
-                
+
+                <section>
+                    <h2 style="font-family: 'Shin Maru Go Emboss';">Webフォントの使い方１</h2>
+                    <p>　</p>
+                    <p class="mfb">
+                        <ul class="fr">
+				<li>CSS 3.0 @font-face にて定義</li>
+				<li>font-familyでフォント名を指定</li>
+				<li>srcでフォントの場所(URL)を指定<br>
+				@font-face {<br>
+				　　font-family: ‘Ryumin Regular KL’;<br>
+				　　src: url(“http://xxx”);<br>
+				}<br></li>
+                        </ul>
+                    </p>
+                    <aside class="notes">
+                    </aside>
+                </section>
+
+                <section>
+                    <h2 style="font-family: 'Shin Maru Go Emboss';">Webフォントの使い方２</h2>
+                    <p>　</p>
+                    <p class="mfb">
+                        <ul class="fr">
+				<li>Webフォントを反映させたい場所に<br>font-family名を指定</li>
+				<li>bodyに指定する場合<br>
+				body {<br>
+				　　font-family: ‘Ryumin Regular KL’;<br>
+				}<br></li>
+                        </ul>
+                    </p>
+                    <aside class="notes">
+                    </aside>
+                </section>
+
+                <section>
+                    <h2 style="font-family: 'Shin Maru Go Emboss';">TypeSquareの使い方</h2>
+                    <p>　</p>
+                    <p class="mfb">
+                        <ol class="fr">
+				<li><a href="https://typesquare.com/" target="_blank">typesquare.com</a>に会員登録</li>
+				<li>利用するドメインを<a href="https://typesquare.com/alicense/" target="_blank">TypeSquareに登録</a></li>
+				<li><a href="https://typesquare.com/alicense/script" target="_blank">認証用スクリプト</a>をheadにコピー</li>
+				<li>font-family名を指定（Webフォントの使い方２）<br>
+				「Webフォントの使い方１」が自動生成される</li>
+                        </ol>
+                    </p>
+                    <aside class="notes">
+                    </aside>
+                </section>
+
                 <section>
                     <h2>ダイナミックサブセット</h2>
                     <p>　</p>
                     <p class="mfb">
                         <ul class="fr">
                             <li>日本語は文字数が多い。</li>
-                            <li>なのでファイルサイズが大きい。</li>
-                            <li>なのでサブセット化してサイズを小さく。</li>
+                            <li>なのでフォントファイルサイズが大きい。</li>
+                            <li>なのでサブセット化して小さくする。</li>
                             <li>サブセット化の際に使う文字を抽出。</li>
                             <li>ここで遅延が発生する。</li>
                         </ul>
                     </p>
-
                     <aside class="notes">
                         使用する文字を検索している。
                     </aside>
                 </section>
-                
+
                 <section>
                     <h2 style="font-family: 'Shin Maru Go Emboss';">使える書体</h2>
                     <p>　</p>
