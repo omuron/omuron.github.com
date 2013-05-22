@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>TypeSquare</title>
+
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="takaomuro">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+	<script type="text/javascript" src="http://typesquare.com/accessor/script/typesquare-api.js?AiqNh1PbzW0%3D" charset="utf-8"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/theme/default.css">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<style>
+	.box-shadow{
+		inset 0 2px 5px rgba(255,255,255,0.6),
+		inset 0 -2px 5px rgba(0,0,0,0.6),
+		0 5px 5px rgba(0,0,0,0.8);
+	}
+	body {
+		font-size 15px;
+	}
+	</style>
+
+        <script>
+            // If the query includes 'print-pdf' we'll use the PDF print sheet
+            document.write('<link rel="stylesheet" href="css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">');
+        </script>
+        
+        <script type="text/javascript">
+            callback1 = function(res) {
+                var i = res.key;
+                var css = document.getElementById('callback_css');
+                var jv = '';
+
+                if (!css) {
+                    css = document.createElement('style');
+                    css.setAttribute('type', 'text/css');
+                    css.setAttribute('rel', 'stylesheet');
+                    css.setAttribute('id', 'callback_css');
+                    document.getElementsByTagName('head')[0].appendChild(css);
+                }
+
+                if (res.type == 'css') {
+                    jv = res.data;
+                }
+                $(css).html(jv);
+
+                if (res.code == 0) {
+                    $("#callback").css('visibility', 'visible');
+                }
+            }
+            TypeSquare.onComplete(callback1);
+
+            callback2 = function(res) {
+                var i = res.key;
+                var css = document.getElementById('dynamic_css');
+                var jv = '';
+
+                if (!css) {
+                    css = document.createElement('style');
+                    css.setAttribute('type', 'text/css');
+                    css.setAttribute('rel', 'stylesheet');
+                    css.setAttribute('id', 'dynamic_css');
+                    document.getElementsByTagName('head')[0].appendChild(css);
+                }
+
+                if (res.type == 'css') {
+                    jv = res.data;
+                }
+                $(css).html(jv);
+            }
+            dynamicRequest = function() {
+                TypeSquare.onComplete(callback2);
+                $('#dynamic').css('fontFamily', 'dynamic_font');
+                TypeSquare.dynamicCss(callback2, $('#dynamic')[0].value, 'Kumoyaji', 'dynamic_font', '');
+            }
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div class="reveal">
+
+            <!-- Used to fade in a background when a specific slide state is reached -->
+            <div class="state-background"></div>
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <h1>Introduction</h1>
+                    <h1>to</h1>
+                    <h1>TypeSquare</h1>
+                    <br>
+                    <h3>Takafumi Omuro, Morisawa Inc.</h3>
+                </section>
+
+                <section>
+                    <h2>はじめに</h2>
+                    <p>　</p>
+                    <p class="mfb">
+                        株式会社モリサワは，フォントや組版ソフトを<br>
+                        開発，販売している会社です。<br>
+			<br>
+			<!--
+			2012年2月よりウェブフォントサービス<br>
+			<a href="http://typesquare.com/" target="_blank">TypeSquare</a>開始<br>
+			-->
+                    </p>
+                    <p>
+                        <i><small>- <a href="http://www.morisawa.co.jp/" target="_blank">www.morisawa.co.jp</a></small></i>
+                    </p>
+                </section>
+
+                <section>
+                    <h2>自己紹介</h2>
+                    <p>　</p>
+                    <p class="mfb">
+                        小室貴史（おむろたかふみ）フォント開発部
+                    </p>
+                    <ul class="fr">
+                        <li>ラスタライザ開発</li>
+			<li>フィーチャーフォン描画エンジン開発</li>
+			<li>Android OSへフォント組込み</li>
+			<li>Android 電子書籍ビューア開発</li>
+                        <li>ウェブフォント, TypeSquare開発</li>
+                    </ul>
+                </section>
+                
+                <section>
+                    <h2 style="font-family: 'Shin Maru Go Emboss';">TYPESQUARE</h2>
+                    <p>　</p>
+                    <p class="mfb">
+                        2012年2月からクラウドフォントサービス「TypeSquare」をはじめました。<br>
+			<!--
+			ただいまTypeSquareを無料でお好きなだけお使いいただける「￥0キャンペーン」を実施中です。<br>
+			<del>2012年</del> 2013年いっぱい無料です！<br>
+			-->
+                    </p>
+                    <p>
+                        <i><small>- <a href="http://typesquare.com/" target="_blank">typesquare.com</a></small></i>
+                    </p>
+                </section>
+
+                <section>
+                    <h2 style="font-family: 'Shin Maru Go Emboss';">Webフォントって？</h2>
+                    <p>　</p>
+                    <p class="mfb">
+                        <ul class="fr">
+                            <li>指定したフォントがウェブで使える。</li>
+			    <li>環境によらず同じフォントが使える。<br>
+			    文字化け, 文字ズレが無くなる</li>
+			    <li>欧米ではかなり使われ始めている。<br>
+			    New York Times, Ford などなど</li>
+			    <li>なぜクラウドフォント？<br>
+			    Webサイトだけではなく、クラウド環境で全てで！</li>
+			    
+                        </ul>
+                    </p>
+                    <aside class="notes">
+                        基本的にはフォントをまるごとブラウザにダウンロード。
+                        サイトイメージの統一。
+                        NYTimes, Ford。それ以外にもGoogle Docsで使えるようになってたり，Creative Cloudで使えるようになってたり。
+                    </aside>
+                </section>
+
+                <section>
+                    <h2 style="font-family: 'Shin Maru Go Emboss';">Webフォントの使い方１</h2>
+                    <p>　</p>
+                    <p class="mfb">
+                        <ul class="fr">
+				<li>CSS 3.0 @font-face にて定義</li>
+				<li>font-familyでフォント名を指定</li>
+				<li>srcでフォントの場所(URL)を指定<br>
+				<span class="udsgr">
+				@font-face {<br>
+				　　font-family: ‘Ryumin Regular KL’;<br>
+				　　src: url(“http://xxx”);<br>
+				}<br></span></li>
+                        </ul>
+                    </p>
+                    <aside class="notes">
+                    </aside>
+                </section>
+
+                <section>
+                    <h2 style="font-family: 'Shin Maru Go Emboss';">Webフォントの使い方２</h2>
+                    <p>　</p>
+                    <p class="mfb">
+                        <ul class="fr">
+				<li>Webフォントを反映させたい場所に<br>font-family名を指定</li>
+				<li>bodyに指定する場合<br>
+				<span class="udsgr">
+				body {<br>
+				　　font-family: ‘Ryumin Regular KL’;<br>
+				}<br></span></li>
+                        </ul>
+                    </p>
+                    <aside class="notes">
+                    </aside>
+                </section>
+
+                <section>
+                    <h2 style="font-family: 'Shin Maru Go Emboss';">TypeSquareの使い方</h2>
+                    <p>　</p>
+                    <p class="mfb">
+                        <ol class="fr">
+				<li><a href="https://typesquare.com/" target="_blank">typesquare.com</a>に会員登録</li>
+				<li>利用するドメインを<a href="https://typesquare.com/alicense/" target="_blank">TypeSquareに登録</a></li>
+				<li><a href="https://typesquare.com/alicense/script" target="_blank">認証用スクリプト</a>をheadにコピー</li>
+				<li>font-family名を指定（Webフォントの使い方２）<br>
+				「Webフォントの使い方１」が自動生成される</li>
+                        </ol>
+                    </p>
+                    <aside class="notes">
+                    </aside>
+                </section>
+
+                <section>
+                    <h2>ダイナミックサブセット</h2>
+                    <p>　</p>
+                    <p class="mfb">
+                        <ul class="fr">
+                            <li>日本語は文字数が多い。</li>
+                            <li>なのでフォントファイルサイズが大きい。</li>
+                            <li>なのでサブセット化して小さくする。</li>
+                            <li>サブセット化の際に使う文字を抽出。</li>
+                            <li>ここで遅延が発生する。</li>
+                        </ul>
+                    </p>
+                    <aside class="notes">
+                        使用する文字を検索している。
+                    </aside>
+                </section>
+
+                <section>
+                    <h2 style="font-family: 'Shin Maru Go Emboss';">使える書体</h2>
+                    <p>　</p>
+                    <p class="fragment reiminr">明朝系</p>
+                    <p class="fragment sgr">ゴシック系</p>
+                    <p class="fragment udsgr">ユニバーサルデザイン書体</p>
+                    <p class="fragment cbsk1">筆書系</p>
+                    <p class="fragment momo">ポップ系</p>
+                    <p class="fragment fr">
+                        <small>　　　　などなど</small>
+                    </p>
+                    <aside class="notes">
+                        現在280書体弱使えます。
+                    </aside>
+                </section>
+                
+                <section>
+                    <h2 style="font-family: 'Shin Maru Go Emboss';">使える書体</h2>
+                    <p>　</p>
+                    <span class="fragment reiminr" style="font-size: 30px;">永</span>
+                    <span class="fragment sgr" style="font-size: 30px;">永</span>
+		    <span class="fragment udsgr" style="font-size: 30px;">永</span><br><br>
+                    <span class="fragment cbsk1" style="font-size: 30px;">永</span>
+                    <span class="fragment momo" style="font-size: 30px;">永</span>
+                    <p class="fragment fr">
+                        <small><br>　　　　280書体程度</small>
+                    </p>
+                    <aside class="notes">
+                        現在280書体弱使えます。
+                    </aside>
+                </section>
+                
+                <section>
+                    <h2 style="font-family: 'Shin Maru Go Emboss';">こんなサイトがあるよ</h2>
+                    <p>　</p>
+                    <ul class="fr">
+                        <li><a href="http://typesquare.com/example/" target="_blank">TypeSquare導入事例</a></li>
+                        <li><a href="http://typesquare.com/simulator/" target="_blank">クラウドフォント・シミュレータ</a></li>
+                        <li><a href="http://blog.keiji.io/2013/05/typesquare.html" target="_blank">めがねをかけるんだ</a></li>
+                        <li><a href="http://komugi.net/archives/2012/02/23120135" target="_blank">コムギドットネット</a></li>
+                    </ul>
+                    <aside class="notes">
+                        TypeSquare.com内のシミュレータ。
+                    </aside>
+                </section>
+                
+                <section>
+                    <section>
+                        <h2 style="font-family: 'Shin Maru Go Emboss';">APIたち</h2>
+                        <p>　</p>
+                        <ul class="fr">
+                            <li>通常配信</li>
+                            <li>ダウンロードコールバック</li>
+                            <li>非同期呼び出し</li>
+                        </ul>
+                        <p>　</p>
+			<p class="fr"><div class="box-shadow">↓下へ↓</div></p>
+    
+                        <aside class="notes">
+                            他にもぱらぱらとありますが，大きなものはこの二つ。組み合わせて使う。
+                        </aside>
+                    </section>
+                    <section>
+                        <h2 style="letter-spacing: -0.15em">ダウンロードコールバック</h2>
+                        <p>　</p>
+                        <p class="mfb">
+                            クラウドフォントのダウンロードが完了したら<br>
+                            コールバックします<br>
+                            ※リロードしてみて下さい
+                        </p>
+                        <p>　</p>
+                        <p class="fr">コールバックなし（通常）</p>
+                        <p id="callback" class="fr" style="visibility: hidden; color: lightgreen;">コールバックあり</p>
+                        <p>　</p>
+                        <p class="fr">↓下へ↓</p>
+                    </section>
+                    <section>
+                        <h2>非同期呼び出し</h2>
+                        <p>　</p>
+                        <p class="mfb">
+                            クラウドフォントを非同期に呼び出します
+                        </p>
+                        <p>　</p>
+                        <p class="momo">同期呼び出し（通常）</p>
+                        <input id="dynamic" type="text" placeholder="非同期呼び出し" value="非同期呼び出し" style="color: blue;" /><button type="button" class="btn" onclick="dynamicRequest();">適用</button>
+                        <aside class="notes">
+                            このプレゼンはJavaScript APIを使ってて，WebAPIも用意してる。
+                        </aside>
+                    </section>
+                </section>
+
+                <section>
+                    <h2 style="font-family: 'Shin Maru Go Emboss';">最新情報はこちら</h2>
+                    <p>　</p>
+                    <p class="mfb">
+                        <a href="http://twitter.com/typesquare" target="_blank">@typesquare</a>
+                        <ul class="fr">
+                            <li><a href="http://typesquare.com/api_reference/" target="_blank">APIリファレンス</a></li>
+                            <li><a href="./fontlist.html" target="_blank">フォント一覧</a></li>
+                            <li><a href="http://github.com/omuron/seminar/" target="_blank">このプレゼンのソース</a></li>
+			    <!--
+                            <li><a href="https://github.com/kanzmrsw/TS4ASample" target="_blank">Androidでのサンプルソース</a></li>
+			    -->
+                        </ul>
+                    </p>
+
+                    <aside class="notes">
+                        リファレンス公開などを発信。
+                        質問やご相談はこのあと私までどうぞ。
+                    </aside>
+                </section>
+                <section>
+                    <h1>THE END</h1>
+                    <h3>BY Takafumi Omuro, Morisawa Inc.</h3>
+                </section>
+            </div>
+
+            <!-- The navigational controls UI -->
+            <aside class="controls">
+                <a class="left" href="#">&#x25C4;</a>
+                <a class="right" href="#">&#x25BA;</a>
+                <a class="up" href="#">&#x25B2;</a>
+                <a class="down" href="#">&#x25BC;</a>
+            </aside>
+
+            <!-- Presentation progress bar -->
+            <div class="progress">
+                <span></span>
+            </div>
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+controls: true,
+progress: true,
+history: true,
+
+transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/linear(2d)
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+{ src: 'lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+{ src: 'lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+{ src: 'lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+{ src: 'socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+{ src: 'plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+]
+});
+
+        </script>
+
+    </body>
+</html>
