@@ -58,7 +58,7 @@
                     $("#callback").css('visibility', 'visible');
                 }
             }
-            TypeSquare.onComplete(callback1);
+            Ts.onComplete(callback1);
 
             callback2 = function(res) {
                 var i = res.key;
@@ -79,9 +79,9 @@
                 $(css).html(jv);
             }
             dynamicRequest = function() {
-                TypeSquare.onComplete(callback2);
+                Ts.onComplete(callback2);
                 $('#dynamic').css('fontFamily', 'dynamic_font');
-                TypeSquare.dynamicCss(callback2, $('#dynamic')[0].value, 'Kumoyaji', 'dynamic_font', '');
+                Ts.dynamicCss(callback2, $('#dynamic')[0].value, 'Kumoyaji', 'dynamic_font', '');
             }
         </script>
 
