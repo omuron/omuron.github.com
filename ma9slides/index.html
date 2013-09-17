@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>TypeSquare in MA9</title>
+
+        <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+        <meta name="author" content="kanzmrsw">
+
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <script type="text/javascript" src="http://typesquare.com/accessor/apiscript/typesquare.js?oCDPlT84HS8%3D" charset="utf-8"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/theme/default.css">
+
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <script>
+            // If the query includes 'print-pdf' we'll use the PDF print sheet
+            document.write('<link rel="stylesheet" href="css/print/' + (window.location.search.match(/print-pdf/gi) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">');
+        </script>
+        
+        <script type="text/javascript">
+            callback1 = function(res) {
+                var i = res.key;
+                var css = document.getElementById('callback_css');
+                var jv = '';
+
+                if (!css) {
+                    css = document.createElement('style');
+                    css.setAttribute('type', 'text/css');
+                    css.setAttribute('rel', 'stylesheet');
+                    css.setAttribute('id', 'callback_css');
+                    document.getElementsByTagName('head')[0].appendChild(css);
+                }
+
+                if (res.type == 'css') {
+                    jv = res.data;
+                }
+                $(css).html(jv);
+
+                if (res.code == 0) {
+                    $("#callback").css('visibility', 'visible');
+                }
+            }
+            Ts.onComplete(callback1);
+
+            callback2 = function(res) {
+                var i = res.key;
+                var css = document.getElementById('dynamic_css');
+                var jv = '';
+
+                if (!css) {
+                    css = document.createElement('style');
+                    css.setAttribute('type', 'text/css');
+                    css.setAttribute('rel', 'stylesheet');
+                    css.setAttribute('id', 'dynamic_css');
+                    document.getElementsByTagName('head')[0].appendChild(css);
+                }
+
+                if (res.type == 'css') {
+                    jv = res.data;
+                }
+                $(css).html(jv);
+            }
+            dynamicRequest = function() {
+                Ts.onComplete(callback2);
+                $('#dynamic').css('fontFamily', 'dynamic_font');
+                Ts.dynamicCss(callback2, $('#dynamic')[0].value, 'Kumoyaji', 'dynamic_font', '');
+            }
+        </script>
+
+        <!--[if lt IE 9]>
+        <script src="lib/js/html5shiv.js"></script>
+        <![endif]-->
+    </head>
+
+    <body>
+        <div class="reveal">
+
+            <!-- Used to fade in a background when a specific slide state is reached -->
+            <div class="state-background"></div>
+
+            <!-- Any section element inside of this container is displayed as a slide -->
+            <div class="slides">
+                <section>
+                    <h1>Introduction</h1>
+                    <h1>to</h1>
+                    <h1>TypeSquare</h1>
+                    <br>
+                    <h3>Morisawa Inc.</h3>
+                </section>
+
+                <section>
+                    <h2>お知らせ</h2>
+                    <p>　</p>
+                    <p class="mfb">
+                        このMeetup，セッションのハッシュタグ。
+                    </p>
+                    <p class="fr">#MA9</p>
+                    <p class="fr">#typesquare</p>
+
+                    <aside class="notes">
+                        たくさん呟いてくれたら伴野さんが喜びます。
+                    </aside>
+                </section>
+                <section>
+                    <h2>はじめに</h2>
+                    <p>　</p>
+                    <p class="mfb">
+                        株式会社モリサワは，フォントや組版ソフトを
+                        <br>
+                        開発，販売している会社です。
+                    </p>
+                    <p>
+                        <i><small>- <a href="http://www.morisawa.co.jp/" target="_blank">www.morisawa.co.jp</a></small></i>
+                    </p>
+
+                    <aside class="notes">
+                        知らない人が殆どだと思うので，モリサワを簡潔に紹介。開発イベントなので，商品の説明などはなし。
+                    </aside>
+                </section>
+                
+                <section>
+                    <h2 style="font-family: 'Shin Maru Go Emboss';">TYPESQUARE</h2>
+                    <p>　</p>
+                    <p class="mfb">
+                        去年の2月からクラウドフォントサービス「TypeSquare」をはじめました。<br>
+                        現在は通常の配信のみです。
+                    </p>
+                    <p>
+                        <i><small>- <a href="http://typesquare.com/" target="_blank">typesquare.com</a></small></i>
+                    </p>
+
+                    <aside class="notes">
+                        「クラウドフォントサービス」
+                    </aside>
+                </section>
+
+                <section>
+                    <h2 style="font-family: 'Shin Maru Go Emboss';">Webフォントって？</h2>
+                    <p>　</p>
+                    <p class="mfb">
+                        <ul class="fr">
+                            <li>指定したフォントがウェブで使える。</li>
+                            <li>なので環境によらず同じフォントが使える。</li>
+                            <li>なのでブランドイメージなどを統一できる。</li>
+                            <li>欧米ではかなり使われ始めている。</li>
+                        </ul>
+                    </p>
+
+                    <aside class="notes">
+                        基本的にはフォントをまるごとブラウザにダウンロード。
+                        サイトイメージの統一。
+                        NYTimes, Ford。それ以外にもGoogle Docsで使えるようになってたり，Creative Cloudで使えるようになってたり。
+                        日本でもちらほら使用例をみるようになってきました。
+                    </aside>
+                </section>
+                
+                <section>
+                    <h2>ダイナミックサブセット</h2>
+                    <p>　</p>
+                    <p class="mfb">
+                        <ul class="fr">
+                            <li>日本語は文字数が多い。</li>
+                            <li>なのでファイルサイズが大きい。</li>
+                            <li>なのでサブセット化してサイズを小さく。</li>
+                            <li>サブセット化の際に使う文字を抽出。</li>
+                            <li>ここで遅延が発生する。</li>
+                        </ul>
+                    </p>
+
+                    <aside class="notes">
+                        使用する文字を検索している。
+                    </aside>
+                </section>
+                
+                <section>
+                    <h2 style="font-family: 'Shin Maru Go Emboss';">使える書体</h2>
+                    <p>　</p>
+                    <p class="fragment reiminr">明朝系</p>
+                    <p class="fragment sgr">ゴシック系</p>
+                    <p class="fragment udsgr">ユニバーサルデザイン書体</p>
+                    <p class="fragment cbsk1">筆書系</p>
+                    <p class="fragment momo">ポップ系</p>
+                    <p class="fragment fr">
+                        <small>　　　　などなど</small>
+                    </p>
+
+                    <aside class="notes">
+                        現在300書体弱使えます。
+                    </aside>
+                </section>
+                
+                <section>
+                    <h2 style="font-family: 'Shin Maru Go Emboss';">使える書体</h2>
+                    <p>　</p>
+                    <span class="fragment reiminr" style="font-size: 100px;">永</span>
+                    <span class="fragment sgr" style="font-size: 100px;">永</span>
+                    <span class="fragment udsgr" style="font-size: 100px;">永</span><br>
+                    <span class="fragment cbsk1" style="font-size: 100px;">永</span>
+                    <span class="fragment momo" style="font-size: 100px;">永</span>
+                    <p class="fragment fr">
+                        <small>　　　　300書体程度</small>
+                    </p>
+
+                    <aside class="notes">
+                        現在300書体弱使えます。
+                    </aside>
+                </section>
+                
+                <section>
+                    <h2 style="font-family: 'Shin Maru Go Emboss';">こんなサイトがあるよ</h2>
+                    <p>　</p>
+                    <ul class="fr">
+                        <li><a href="http://typesquare.com/sample/csseffect/" target="_blank">CSSサンプル集</a></li>
+                        <li><a href="http://kudakurage.com/webfonts/" target="_blank">Web Fonts Design Sample</a></li>
+                        <li><a href="http://maru-tomo-quiz.com/" target="_blank">ともだち検定</a></li>
+                    </ul>
+
+                    <aside class="notes">
+                        Cookpad池田さん作。CSSのみ。JS使ってない。
+                        Cookpad元山さん作。実践的サンプル。
+                        昨年のMA8モリサワ賞受賞作。
+                    </aside>
+                </section>
+                
+                <section>
+                    <section>
+                        <h2 style="font-family: 'Shin Maru Go Emboss';">APIたち</h2>
+                        <p>　</p>
+                        <ul class="fr">
+                            <li>通常配信</li>
+                            <li>ダウンロードコールバック</li>
+                            <li>非同期呼び出し</li>
+                        </ul>
+                        <p>　</p>
+                        <p class="fr">↓下へ↓</p>
+    
+                        <aside class="notes">
+                            他にもぱらぱらとありますが，大きなものはこの二つ。組み合わせて使う。
+                        </aside>
+                    </section>
+                    <section>
+                        <h2 style="letter-spacing: -0.15em">ダウンロードコールバック</h2>
+                        <p>　</p>
+                        <p class="mfb">
+                            クラウドフォントのダウンロードが完了したら<br>
+                            コールバックします<br>
+                            ※リロードしてみて下さい
+                        </p>
+                        <p>　</p>
+                        <p class="fr">コールバックなし（通常）</p>
+                        <p id="callback" class="fr" style="visibility: hidden; color: lightgreen;">コールバックあり</p>
+                        <p>　</p>
+                        <p class="fr">↓下へ↓</p>
+                    </section>
+                    <section>
+                        <h2>非同期呼び出し</h2>
+                        <p>　</p>
+                        <p class="mfb">
+                            クラウドフォントを非同期に呼び出します
+                        </p>
+                        <p>　</p>
+                        <p class="momo">同期呼び出し（通常）</p>
+                        <input id="dynamic" type="text" placeholder="非同期呼び出し" value="非同期呼び出し" style="color: blue;" /><button type="button" class="btn" onclick="dynamicRequest();">適用</button>
+                        <aside class="notes">
+                            このプレゼンはJavaScript APIを使ってて，WebAPIも用意してる。
+                        </aside>
+                    </section>
+                </section>
+                
+                <section>
+                    <h2 style="font-family: 'Shin Maru Go Emboss';">最新情報はこちら</h2>
+                    <p>　</p>
+                    <p class="mfb">
+                        <a href="http://twitter.com/typesquare" target="_blank">@typesquare</a>
+                        <ul class="fr">
+                            <li><a href="http://typesquare.com/api_reference/" target="_blank">APIリファレンス</a></li>
+                            <li><a href="http://typesquare.com/service/fontlist" target="_blank">フォント一覧</a></li>
+                            <li><a href="http://github.com/kanzmrsw/ma9slides/" target="_blank">このプレゼンのソース</a></li>
+                        </ul>
+                    </p>
+
+                    <aside class="notes">
+                        リファレンス公開などを発信。
+                        質問やご相談はこのあと私までどうぞ。
+                    </aside>
+                </section>
+                <section>
+                    <h1>THE END</h1>
+                    <h3>Morisawa Inc.</h3>
+                </section>
+            </div>
+
+            <!-- The navigational controls UI -->
+            <aside class="controls">
+                <a class="left" href="#">&#x25C4;</a>
+                <a class="right" href="#">&#x25BA;</a>
+                <a class="up" href="#">&#x25B2;</a>
+                <a class="down" href="#">&#x25BC;</a>
+            </aside>
+
+            <!-- Presentation progress bar -->
+            <div class="progress">
+                <span></span>
+            </div>
+
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.min.js"></script>
+
+        <script>
+
+// Full list of configuration options available here:
+// https://github.com/hakimel/reveal.js#configuration
+Reveal.initialize({
+controls: true,
+progress: true,
+history: true,
+
+transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/linear(2d)
+
+// Optional libraries used to extend on reveal.js
+dependencies: [
+{ src: 'lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+{ src: 'lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+{ src: 'lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+{ src: 'socket.io/socket.io.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+{ src: 'plugin/speakernotes/client.js', async: true, condition: function() { return window.location.host === 'localhost:1947'; } },
+]
+});
+
+        </script>
+
+    </body>
+</html>
