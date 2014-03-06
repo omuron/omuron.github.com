@@ -1,0 +1,498 @@
+body {
+  background: #fff;
+  color: #000;
+	margin: 0;
+	padding: 0;
+	text-ailgn: center;
+	-webkit-text-size-adjust: 100%;
+}
+
+body.fixed {
+  height: 100%;
+  overflow: hidden;
+}
+
+img {
+  border: none;
+}
+
+#wrapper {
+	margin: 0 auto;
+	overflow: hidden;
+	padding-bottom: 50px;
+	text-align: left;
+	width:100%;
+}
+
+#wrapper:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+#layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  opacity: 0.8;
+  display: none;
+  z-index: 9;
+}
+
+h1 {
+  font-family: "UD Shin Go Regular", sans-serif;
+	font-size: 32px;
+  margin: 25px 0 0 0;
+  text-align: center;
+}
+
+#logo {
+	margin-bottom: -20px;
+  text-align: center;
+}
+
+#logo img {
+  margin-top: 10px;
+  width: 80px;
+}
+
+.site_description {
+  font-family: "Shin Go ExLight", sans-serif;
+  font-size: 12px;
+  margin: 0;
+  text-indent: 10px;
+  text-align: center;
+}
+
+.module {
+	text-align: center;
+  height: auto;
+  margin: 50px 0;
+  position: relative;
+}
+
+.module_title {
+  border-bottom: 1px solid #eee;
+	font-size: 12px;
+	font-weight: normal;
+  font-family: "Shin Go ExLight", sans-serif;
+  margin:20px 7px;
+  padding-bottom: 7px;
+	position: relative;
+  text-align: left;
+}
+
+.module_window {
+  display: none;
+  background: #fff;
+  box-sizing: border-box;
+  border: 5px solid #00b4ff;
+  height: 510px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 700px;
+  z-index: 999;
+  box-shadow: 0 0 10px #ccc;
+}
+
+
+.module_window_body {
+  position: relative;
+}
+
+.module_window_body .close_button{
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 0 5px 5px;
+  background: #00b4ff;
+}
+
+.module_window_body .close_button:hover{
+  opacity: 0.6;
+}
+
+.module_window_body .browser {
+  color: #999;
+  font-size: 12px;
+  font-family: "Shin Go DeBold", sans-serif;
+  padding-top: 7px;
+  text-align: left;
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+
+.module_window_body .browser ul{
+  color: #333;
+  list-style: none;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.module_window_body .browser ul li{
+  display: inline;
+  margin-right: 8px;
+  white-space: nowrap;
+}
+
+.module_window_body .browser ul li img {
+  display: none;
+}
+
+
+.module_window_body .source_code {
+  padding: 30px 20px 5px 20px;
+  text-align: left;
+}
+
+.module_window_body .source_code .label {
+  font-family: "Shin Go DeBold", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 5px 0;
+}
+
+.module_window_body .source_code textarea {
+  border: 1px solid #ddd;
+  background: #f7f7f7;
+  padding: 1%;
+  width: 98%;
+  height: 120px;
+  overflow: auto;
+}
+
+.module_window_body .source_code textarea:focus {
+  border-color: #cf4f80;
+}
+
+.module_window_body .attention {
+  font-family: "Shin Go Light", sans-serif;
+  font-size: 12px;
+  margin-left: 20px;
+  margin-right: 20px;
+  text-align: left;
+}
+
+.show_window .module_window {
+  display: block;
+}
+
+.view_source_button {
+  background: #f3f3f3;
+  border-radius: 20px;
+  border: 1px solid #dedede;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 7px 0;
+  width:120px;
+  margin: 20px auto 0 auto;
+  font-family: "Shin Go Light", sans-serif;
+}
+
+.view_source_button:hover {
+  border: 1px solid #cf4f80;
+  color: #fff;
+  background: #ff64a0;
+}
+
+#copyright {
+  font-family: "UD Shin Go Regular", sans-serif;
+  font-size: 10px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+#module1 .module_body {
+  display: none;
+}
+
+#module1 .module_body.small {
+  display: block;
+}
+
+#module1_2 .module_body {
+  display: none;
+}
+
+#module1_2 .module_body.small {
+  display: block;
+}
+
+#module13 .module_body,
+#module14 .module_body,
+#module15 .module_body {
+  height: 260px;
+  margin-left: -50px;
+  width: 100%;
+  text-align: center;
+  -webkit-transform: scale(0.5);
+  -moz-transform: scale(0.5);
+  -ms-transform: scale(0.5);
+  transform: scale(0.5);
+  -webkit-transform-origin : 50% 0;
+  -moz-transform-origin : 50% 0;
+  -ms-transform-origin : 50% 0;
+  transform-origin : 50% 0;
+}
+
+#module13 .view_source_button,
+#module14 .view_source_button,
+#module15 .view_source_button {
+
+}
+
+#module16 .view_source_button {
+	position: relative;
+	top: 30px;
+	margin-bottom: 70px;
+}
+
+@media screen and (min-width: 600px) {
+  #wrapper {
+    width: 800px;
+  }
+
+  h1 {
+    font-size: 52px;
+    margin: 30px 0 0 0;
+    text-indent: -5px;
+  }
+
+  #logo {
+    position: relative;
+	  margin-bottom: -50px;
+	  text-align: left;
+  }
+
+  #logo img {
+    margin-top: 15px;
+    width: 100px
+  }
+
+  .site_description {
+    font-size: 18px;
+    margin-bottom: 90px;
+    text-indent: 5px;
+  }
+
+  .module {
+    height: 500px;
+    margin: 0;
+  }
+
+  .module_title {
+	  font-size: 18px;
+	  margin: 20px 0;
+    padding-bottom: 5px;
+  }
+
+  .module_body {
+    -webkit-transform-origin : 50% 0;
+    -moz-transform-origin : 50% 0;
+    -ms-transform-origin : 50% 0;
+    transform-origin : 50% 0;
+  }
+
+  .module_window_body .browser ul{
+    display: inline;
+  }
+
+  .module_window_body .source_code textarea {
+    height: 150px;
+  }
+
+  .module_window_body .browser ul li img {
+    vertical-align: middle;
+    margin-right: 3px;
+    display: inline;
+  }
+
+  .module_window_body .browser ul li {
+    margin-left: 8px;
+    margin-right: 0;
+  }
+
+
+  .view_source_button {
+    display: block;
+    margin: 0;
+    padding: 2px 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: auto;
+  }
+
+  #module1 {
+    height: 450px;
+  }
+
+  #module1 .module_body {
+    display: block;
+    margin-top: 30px;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  #module1 .module_body.small {
+    display: none;
+  }
+
+
+  #module1_2 {
+    height: 350px;
+    display: block;
+  }
+
+  #module1_2 .module_body {
+    display: block;
+    margin-top: 30px;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  #module1_2 .module_body.small {
+    display: none;
+  }
+
+  #module2 {
+    height: 350px;
+  }
+
+  #module2 .module_body {
+    margin-top: 30px;
+    -webkit-transform: scale(2.6);
+    -moz-transform: scale(2.6);
+    -ms-transform: scale(2.6);
+    transform: scale(2.6);
+  }
+
+  #module3_2 {
+    height: 320px;
+  }
+
+  #module3_2 .module_body {
+    margin-top: 50px;
+    -webkit-transform: scale(2.5);
+    -moz-transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    transform: scale(2.5);
+  }
+
+  #module4 .module_body {
+    margin-top: 40px;
+    -webkit-transform: scale(1.7);
+    -moz-transform: scale(1.7);
+    -ms-transform: scale(1.7);
+    transform: scale(1.7);
+  }
+
+  #module5 {
+    height: 430px;
+  }
+
+  #module5 .module_body {
+    margin-top: 40px;
+    -webkit-transform: scale(2.5);
+    -moz-transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    transform: scale(2.5);
+  }
+
+  #module7 .module_body {
+    margin-top: 40px;
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    transform: scale(2);
+  }
+
+  #module8 .module_body {
+    margin-top: 40px;
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    transform: scale(2);
+  }
+
+  #module9 {
+	  height: 300px;
+  }
+
+  #module9 .module_body {
+    margin-top: 40px;
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    transform: scale(2);
+  }
+
+  #module10 .module_body {
+    margin-top: 40px;
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    transform: scale(2);
+  }
+
+  #module11 .module_body {
+    margin-top: 40px;
+    -webkit-transform: scale(2.2);
+    -moz-transform: scale(2.2);
+    -ms-transform: scale(2.2);
+    transform: scale(2.2);
+  }
+
+  #module12 {
+    height: 300px;
+  }
+
+  #module12 .module_body {
+    margin-top: 50px;
+    -webkit-transform: scale(2.5);
+    -moz-transform: scale(2.5);
+    -ms-transform: scale(2.5);
+    transform: scale(2.5);
+  }
+
+  #module13,
+  #module14,
+  #module15 {
+    height: 650px;
+  }
+
+  #module13 .module_body,
+  #module14 .module_body,
+  #module15 .module_body {
+    margin-top: 30px;
+    margin-left: 0;
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+
+  #module16 .module_body {
+    margin-top: 40px;
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    transform: scale(2);
+  }
+
+  #module16 .view_source_button {
+    position: absolute;
+    top: 0;
+    margin-bottom: 0;
+  }
+}
